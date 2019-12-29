@@ -44,6 +44,8 @@ function reducer(state = initalState, action) {
             return applyRestartTimer(state);
         case ADD_SECOND:
             return applyAddSecond(state);
+        default:
+            return state;
     }
 }
 
@@ -79,12 +81,13 @@ function applyAddSecond(state) {
         
     }
 }
+
 //Export Action creators
 const actionCreators = {
     startTimer,
     restartTImer,
     addSecond
 };
-//Export Reducer
 
+//Export Reducer
 export default reducer;
