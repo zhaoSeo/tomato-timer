@@ -54,8 +54,7 @@ function applyStartTimer(state) {
     return {
         ...state,
         //변환
-        isPlaying:true,
-        elapsedTime: 0
+        isPlaying:true
     }
 }
 
@@ -76,7 +75,8 @@ function applyAddSecond(state) {
     } else {
         return {
             ...state,
-            isPlaying: false
+            isPlaying: false,
+            elapsedTime: 0
         }
         
     }
